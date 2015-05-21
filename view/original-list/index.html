@@ -12,10 +12,6 @@
   <link rel="stylesheet" type="text/css" href="../../app.css">
 
   <script src="../../app/libs/components/threads/threads.js"></script>
-  <script src="../../threads-manager.js"></script>
-  <script src="../../navigation.js"></script>
-  <script src="../../app.js"></script>
-  <script src="list.js"></script>
 
   <!-- Building Blocks -->
   <link href="../../shared/style/input_areas.css" rel="stylesheet">
@@ -97,9 +93,11 @@
   <script defer src="../../shared/../../contacts/elements/gaia_sim_picker/script.js"></script>
   -->
 
-  <script defer src="../../shared/js/lazy_loader.js"></script>
-  <script defer src="../../contacts/js/utilities/performance_helper.js"></script>
-  <script defer src="../../contacts/js/bootstrap.js"></script>
+  <script src="../../shared/js/lazy_loader.js"></script>
+  <script src="../../contacts/js/utilities/performance_helper.js"></script>
+  <!--<script defer src="../../contacts/js/bootstrap.js"></script>-->
+  <script src="./app.js"></script>
+  <script src="./list.js"></script>
 
   <link rel="localization" href="../../contacts/locales-obj/contacts.index.en-US.json">
 
@@ -162,7 +160,7 @@
   <section id='view-contacts-list' role="region" data-state="active" class="view view-noscroll view-contacts-list current">
     <gaia-header id="contacts-list-header">
       <h1 id="app-title" data-l10n-id="contacts"></h1>
-      <button id="add-contact-button" data-icon="add" data-l10n-id="addButton"></button>
+      <button id="add-contact-button" data-icon="add" data-l10n-id="addButton" disabled></button>
       <button id="settings-button" data-icon="settings" data-l10n-id="settingsButton"></button>
 
     </gaia-header>
@@ -218,7 +216,7 @@
       <div id="groups-container-box">
         <div id="groups-container" class="view-body-inner">
           <div id="groups-container-background">
-            <form id="search-container" class="search" role="search">
+            <form id="search-container" class="search hide" role="search">
               <p>
                 <label id="search-start">
                   <input type="search" name="search" class="textfield" x-inputmode="verbatim"

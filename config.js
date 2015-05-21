@@ -4,7 +4,7 @@
     'debug': false,
     // Could be any value between
     // ['list', 'detail', 'all']
-    'original-ui': []
+    'original-ui': ['all']
   }
 
   exports.Config = {
